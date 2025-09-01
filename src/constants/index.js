@@ -57,7 +57,7 @@ export const navigation = [
     title: "Roadmap",
     url: "#roadmap",
   },
-  /*{
+  {
     id: "4",
     title: "New account",
     url: "#signup",
@@ -68,7 +68,9 @@ export const navigation = [
     title: "Sign in",
     url: "#login",
     onlyMobile: true,
-  },*/
+  },
+  
+
 ];
 
 export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
