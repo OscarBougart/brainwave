@@ -37,10 +37,9 @@ const Header = () => {
       }`}
     >
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:px-4">
-        <a className="block w-[12rem] xl:mr-8 href='#hero'">
-          <img src={brainwave} width={190} height={40} alt="starlit iris" />
-        </a> 
-      
+         <h1 className="font-thin  h3   "  alt="starlit iris">
+            Starlit Iris
+          </h1>  
         <nav
           className={`${
             openNavigation ? "flex" : "hidden"

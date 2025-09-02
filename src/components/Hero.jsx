@@ -2,15 +2,15 @@ import { curve, robot, heroBackground } from "../assets";
 import Button from "./Button";
 import Section from "./Section";
 import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
-import {heroIcons} from '../constants';
+import { heroIcons } from "../constants";
 import { ScrollParallax } from "react-just-parallax";
 import { useRef } from "react";
 import Generating from "./design/Generating";
 import Notification from "./design/Notification";
-
+import CompanyLogos from "./design/CompanyLogos";
 
 const Hero = () => {
-    const parallaxRef= useRef(null);
+  const parallaxRef = useRef(null);
   return (
     <Section
       className=" pt-[12rem] -mt-[5.25rem]"
@@ -22,22 +22,22 @@ const Hero = () => {
       <div className="container relative" ref={parallaxRef}>
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[4rem] md:mb-20 lg:mb:[6rem]">
           <h1 className="h1 mb-6 color">
-  Conversations beyond
-  <br />
-  <span>
-    human limits{" "}
-    <span className="inline-block relative text-color-1">
-      Starlit Iris
-      <img
-        src={curve}
-        className="absolute top-full left-0 w-full xl:-mt-2"
-        width={624}
-        height={28}
-        alt="Curve"
-      />
-    </span>
-  </span>
-</h1>
+            Conversations beyond
+            <br />
+            <span>
+              human limits{" "}
+              <span className="inline-block relative text-color-1">
+                Starlit Iris
+                <img
+                  src={curve}
+                  className="absolute top-full left-0 w-full xl:-mt-2"
+                  width={624}
+                  height={28}
+                  alt="Curve"
+                />
+              </span>
+            </span>
+          </h1>
           <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
             Discover the power of AI within Starlit Iris. Upgrade your
             productivity with the open AI chat app.
@@ -60,29 +60,27 @@ const Hero = () => {
                   width={1024}
                   alt="AI"
                 />
-                
+
                 <Generating className="absolute left-4 right-4 bottom-5 md:left-1/2 md:right-auto md:bottom-8 md:w-[31rem] md:-translate-x-1/2" />
                 <ScrollParallax isAbsolutelyPositioned>
-                    <ul className="hidden absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1 bg-n-9/40 backdrop-blur border border-n-1/10 rounded-2xl xl:flex">
-                        {heroIcons.map((icon,index,) => (
-                            <li className="p-5" key={index}>
-                                <img width={24} height={25} src={icon} alt={icon} />
-
-                            </li>
-                        ))}
-                    </ul>
+                  <ul className="hidden absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1 bg-n-9/40 backdrop-blur border border-n-1/10 rounded-2xl xl:flex">
+                    {heroIcons.map((icon, index) => (
+                      <li className="p-5" key={index}>
+                        <img width={24} height={25} src={icon} alt={icon} />
+                      </li>
+                    ))}
+                  </ul>
                 </ScrollParallax>
-           
+
                 <ScrollParallax isAbsolutelyPositioned>
                   <Notification
                     className="hidden absolute -right-[5.5rem] bottom-[11rem] w-[18rem] xl:flex"
                     title="Code generation"
                   />
                 </ScrollParallax>
-
               </div>
             </div>
-            <Gradient/>
+            <Gradient />
           </div>
           <div className="absolute -top-[54%] left-1/2 w-[234%] -translate-x-1/2 md:-top-[46%] md:w-[138%] lg:-top-[104%]">
             <img
@@ -93,10 +91,11 @@ const Hero = () => {
               alt="hero"
             ></img>
           </div>
-          <BackgroundCircles/>
+          <BackgroundCircles />
         </div>
+        <CompanyLogos className="hidden relative mt-20 lg:block z-10" />
       </div>
-      <BottomLine/>
+      <BottomLine />
     </Section>
   );
 };
